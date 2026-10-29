@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vlaamse TV</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="tv-icon">▣</span><div><strong>Vlaamse TV</strong><small>Alle Vlaamse zenders samen</small></div></div>
+    <nav aria-label="Hoofdnavigatie">
+      <button class="nav active" data-view="live">Live tv</button>
+      <button class="nav" data-view="guide">Tv-gids</button>
+      <button class="nav" data-view="about">Info</button>
+    </nav>
+  </header>
+  <main>
+    <section id="live-view" class="view">
+      <div class="section-heading"><div><p class="eyebrow">ÉÉN OVERZICHT</p><h1>Live tv</h1></div><span id="clock" class="clock"></span></div>
+      <p class="notice">Selecteer een zender. Rechtstreeks afspelen werkt alleen wanneer de omroep een officiële, toegankelijke stream aanbiedt. Deze startversie opent anders de officiële dienst.</p>
+      <div id="channels" class="channels" role="list"></div>
+      <section class="player-panel">
+        <div class="player-screen" id="player-screen">
+          <div class="screen-mark">V</div><p id="player-title">Kies een zender om te beginnen</p>
+          <p id="player-subtitle">Geen ongeautoriseerde streams worden gebruikt.</p>
+        </div>
+        <div class="player-meta"><div><span class="live-dot"></span><strong id="selected-name">Nog geen zender gekozen</strong><p id="selected-desc">Kies een zender hierboven.</p></div><button id="open-official" class="primary" disabled>Open officiële dienst ↗</button></div>
+      </section>
+    </section>
+    <section id="guide-view" class="view hidden">
+      <div class="section-heading"><div><p class="eyebrow">VANDAAG</p><h1>Tv-gids</h1></div><span class="clock" id="guide-date"></span></div>
+      <p class="notice">De gids gebruikt voorbeeldprogramma’s zolang er geen officiële programmagids/API is gekoppeld. Uitzenduren hieronder zijn demonstratiedata, geen actuele uitzendschema’s.</p>
+      <div class="guide-wrap"><table><thead><tr><th>Tijd</th><th>Zender</th><th>Programma</th><th>Status</th></tr></thead><tbody id="guide-rows"></tbody></table></div>
+    </section>
+    <section id="about-view" class="view hidden">
+      <p class="eyebrow">EERSTE PROTOTYPE</p><h1>Een startpunt, geen officiële tv-dienst</h1>
+      <div class="about-grid">
+        <article><h2>Wat werkt nu?</h2><p>Afstandsbedieningsvriendelijke interface, zenderlijst, zenderselectie, officiële links en demonstratie-tv-gids.</p></article>
+        <article><h2>Wat moet nog gekoppeld worden?</h2><p>Officiële livestream-integraties per omroep, actuele EPG-data, testen op jouw tv-model en ondertekening/publicatie voor Samsung Tizen en LG webOS.</p></article>
+        <article><h2>Privacy en toegang</h2><p>Deze demo vraagt geen accountgegevens en bevat geen verborgen stream-URL’s. Gebruik je bestaande accounts rechtstreeks bij de officiële diensten wanneer dat nodig is.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><span>Vlaamse TV · prototype</span><span>↑ ↓ navigeren · Enter selecteren</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
